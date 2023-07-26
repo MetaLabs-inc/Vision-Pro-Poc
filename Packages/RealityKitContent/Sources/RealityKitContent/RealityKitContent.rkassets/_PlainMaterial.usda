@@ -7,11 +7,11 @@
 
 def Xform "Root"
 {
-    def Material "PlainMaterial"
+    def Material "Material"
     {
         token outputs:mtlx:surface
         token outputs:realitykit:vertex
-        prepend token outputs:surface.connect = </Root/PlainMaterial/UsdPreviewSurface.outputs:surface>
+        prepend token outputs:surface.connect = </Root/Material/UsdPreviewSurface.outputs:surface>
         float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
         float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
 
@@ -30,7 +30,6 @@ def Xform "Root"
                 colorSpace = "Input - Texture - sRGB - sRGB"
             )
             float inputs:metallic = 0.15
-            float inputs:roughness = 0.5
             token outputs:surface
         }
     }
